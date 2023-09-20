@@ -1,8 +1,12 @@
 # API-Clinica-Medica-CRUD
+---
+### ⏳ Status do Projeto
+> :construction: Projeto em construção :construction:
+---
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/RobsonCoura/API-Clinica-Medica-CRUD/blob/main/LICENSE) 
 
-# Sobre o projeto
+## Sobre o projeto
 
 Projeto desenvolvido em Java utilizando SpringBoot3 para construção de uma API de cadastro para uma clínica médica.
 <br>É possível cadastrar médicos e pacientes, bem como agendar consultas.
@@ -46,7 +50,7 @@ As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do proj
 
 ---
 
-### Regras de negócio:
+## 🎯 Regras de negócio:
 
 1. O sistema deve possuir uma funcionalidade que permita o agendamento de consultas, na qual as seguintes informações deverão ser preenchidas:
 
