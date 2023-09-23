@@ -15,6 +15,7 @@ import med.voll.api.endereco.Endereco;
 @Table(name = "pacientes")
 public class Paciente {
 
+    //Atributos + anotacoes da JPA
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -27,6 +28,7 @@ public class Paciente {
     @Embedded
     private Endereco endereco;
 
+    //Construtor com argumentos
     public Paciente(DadosCadastroPaciente dados) {
         this.nome = dados.nome();
         this.email = dados.email();
