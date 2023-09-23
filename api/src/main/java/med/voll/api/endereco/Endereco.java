@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Endereco {
 
+    //Atributos
     private String logradouro;
     private String bairro;
     private String cep;
@@ -19,6 +20,7 @@ public class Endereco {
     private String cidade;
     private String uf;
 
+    //Construtor com argumentos
     public Endereco(DadosEndereco dados) {
         this.logradouro = dados.logradouro();
         this.cidade = dados.cidade();
@@ -27,5 +29,28 @@ public class Endereco {
         this.bairro = dados.bairro();
         this.numero = dados.numero();
         this.complemento = dados.complemento();
+    }
+
+    //Método para atualizar informacoes
+    public void atualizarInformacoes(DadosEndereco dados) {
+        //Condicao atualizar apenas se o campo estiver vindo no JSON
+        if (dados.logradouro() != null) {
+            this.logradouro = dados.logradouro();
+        }
+        if (dados.bairro() != null) {
+            this.bairro = dados.bairro();
+        }
+        if (dados.cep() != null) {
+            this.cep = dados.cep();
+        }
+        if (dados.uf() != null) {
+            this.uf = dados.uf();
+        }
+        if (dados.numero() != null) {
+            this.numero = dados.numero();
+        }
+        if (dados.complemento() != null) {
+            this.complemento = dados.complemento();
+        }
     }
 }
