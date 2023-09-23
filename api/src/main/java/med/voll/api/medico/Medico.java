@@ -15,6 +15,7 @@ import med.voll.api.endereco.Endereco;
 @EqualsAndHashCode(of = "id")
 public class Medico {
 
+    //Atributos + anotacoes da JPA
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -27,6 +28,7 @@ public class Medico {
     @Embedded
     private Endereco endereco;
 
+    //Construtor com argumentos
     public Medico(DadosCadastroMedico dados) {
         this.nome = dados.nome();
         this.email = dados.email();
@@ -34,5 +36,19 @@ public class Medico {
         this.crm = dados.crm();
         this.especialidade = dados.especialidade();
         this.endereco = new Endereco(dados.endereco());
+    }
+
+    //Método para atualizar informacoes
+    public void atualizarInformacoes(DadosAtualizacaoMedico dados) {
+        //Condicao atualizar apenas se o campo estiver vindo no JSON
+        if (dados.nome() != null) {
+            this.nome = dados.nome();
+        }
+        if (dados.telefone() != null) {
+            this.telefone = dados.telefone();
+        }
+        if (dados.endereco() != null) {
+            this.endereco.atualizarInformacoes(dados.endereco());
+        }
     }
 }
