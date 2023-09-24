@@ -38,5 +38,15 @@ public class MedicoController {
         var medico = repository.getReferenceById(dados.id());
         medico.atualizarInformacoes(dados);
     }
-    
+
+    //Método para funcionabilidade de exclusao logica um médico (DELETE)
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void excluir(@PathVariable Long id) {
+        //Carregar o medico no banco de dados
+        var medico = repository.getReferenceById(id);
+        //Setando o atributo ativo para inativo
+        medico.excluir();
+    }
+
 }
