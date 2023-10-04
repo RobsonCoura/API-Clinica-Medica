@@ -28,6 +28,8 @@ public class Paciente {
     @Embedded
     private Endereco endereco;
 
+    private Boolean ativo;
+
     //Construtor com argumentos
     public Paciente(DadosCadastroPaciente dados) {
         this.nome = dados.nome();
@@ -50,4 +52,7 @@ public class Paciente {
             endereco.atualizarInformacoes(dados.endereco());
     }
 
+    public void inativar() {
+        this.ativo = false;
+    }
 }
