@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
     //Metodo que faz a consulta de usuario no banco de dados pelo campo email.
-    UserDetails findByLogin(String email);
+    UserDetails findByLogin(String login);
 }
