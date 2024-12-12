@@ -1,0 +1,2 @@
+ALTER TABLE usuarios
+CHANGE COLUMN email login VARCHAR(100) NOT NULL;
