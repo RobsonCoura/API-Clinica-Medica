@@ -1,4 +1,4 @@
-# API-Clinica-Medica-CRUD
+# API-Clinica-Medica
 ---
 ### ⏳ Status do Projeto
 > :construction: Projeto em construção :construction:
